@@ -50,19 +50,21 @@ internal class Program
         j.x = 8;
         j.y = 5;
 
-        Console.WriteLine(a.Name);
-        Console.WriteLine(a.x);
-        Console.WriteLine(a.y);
-            } 
-}
+        PointCoordinates[] point = { a, b, c, d, e, f, g, h, i, j };
 
-    /*string GetInfoPoint()
-    {
-        return "Point" + Name + " has coordinates: " + x + ", " + y "
+        string ShowInfoPoint()
+        {
+            return "Point" + Name + " has coordinates: " + x + ", " + y;
+        }
+
+        a.ShowInfoPoint();
     }
-        PointCoordinates[] point = {a, b, c, d, e, f, g, h, i, j};
+}
+    /*
+
         for (int i = 0; int < 10; i ++)
         {
-            Console.WriteLine(point[i].GetInfoPoint);
+            Console.WriteLine(point[i].ShowInfoPoint);
         }
-}*/
+}
+    */
