@@ -10,61 +10,41 @@ internal class Program
     {
 
         PointCoordinates a = new PointCoordinates();
-        a.Name = "a";
         a.x = 3;
         a.y = 4;
         PointCoordinates b = new PointCoordinates();
-        b.Name = "b";
         b.x = 5;
         b.y = 2;
         PointCoordinates c = new PointCoordinates();
-        c.Name = "c";
         c.x = 3;
         c.y = 8;
         PointCoordinates d = new PointCoordinates();
-        d.Name = "d";
         d.x = 5;
         d.y = 5;
         PointCoordinates e = new PointCoordinates();
-        e.Name = "e";
         e.x = 2;
         e.x = 8;
         PointCoordinates f = new PointCoordinates();
-        f.Name = "f";
         f.x = 1;
         f.y = 3;
         PointCoordinates g = new PointCoordinates();
-        g.Name = "g";
         g.x = 3;
         g.y = 6;
         PointCoordinates h = new PointCoordinates();
-        h.Name = "h";
         h.x = 5;
         h.y = 3;
-        PointCoordinates i = new PointCoordinates();
-        i.Name = "i";
+        PointCoordinates i = new PointCoordinates();;
         i.x = 2;
         i.y = 3;
         PointCoordinates j = new PointCoordinates();
-        j.Name = "j";
         j.x = 8;
         j.y = 5;
 
-        PointCoordinates[] point = { a, b, c, d, e, f, g, h, i, j };
+        PointCoordinates[] points = { a, b, c, d, e, f, g, h, i, j };
 
-        string ShowInfoPoint()
-        {
-            return "Point" + Name + " has coordinates: " + x + ", " + y;
+        foreach (PointCoordinates point in points)
+        { 
+            point.ShowInfoPoint(); 
         }
-
-        a.ShowInfoPoint();
     }
 }
-    /*
-
-        for (int i = 0; int < 10; i ++)
-        {
-            Console.WriteLine(point[i].ShowInfoPoint);
-        }
-}
-    */

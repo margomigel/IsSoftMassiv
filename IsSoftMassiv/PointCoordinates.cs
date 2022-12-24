@@ -8,8 +8,11 @@ namespace ClassPoint
 {
     internal class PointCoordinates
     {
-        public string Name;
         public int x; 
         public int y;
+        public void ShowInfoPoint()
+        {
+            Console.WriteLine("Point has coordinates: " + x + ", " + y);
+        }
     }
 }
