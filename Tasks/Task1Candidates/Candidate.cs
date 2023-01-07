@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IsSoftMassiv
+namespace Task1Candidates
 {
     public class Candidate
     {

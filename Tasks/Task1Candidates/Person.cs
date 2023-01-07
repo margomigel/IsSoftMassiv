@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IsSoftMassiv
+namespace Task1Candidates
 {
     public class Person
     {
-        public string Name;
-        public string Surname;
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public Address Address;
 
         public Person (string name, string surname, Address address)
