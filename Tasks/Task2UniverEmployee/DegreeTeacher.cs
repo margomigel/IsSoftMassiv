@@ -7,7 +7,7 @@ namespace Task2UniverEmployee
         public string ScienceDegree;
         public string Rank;
 
-        public DegreeTeacher(person person,
+        public DegreeTeacher(string person,
             int taxID,
             Course course,
             string scienceDegree,

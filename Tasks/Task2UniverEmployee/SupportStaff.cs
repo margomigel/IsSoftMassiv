@@ -6,13 +6,13 @@ namespace Task2UniverEmployee
     {
         string Function;
 
-        public SupportStaff(Person person, int taxID, string function) : base(person, taxID)
+        public SupportStaff(string person, int taxID, string function) : base(person, taxID)
         {
             Function = function;
         }
 
-        public override string GetOfficialDuties():
-	{
+        public override string GetOfficialDuties()
+	    {
             return $"{Function} duties";
         }
     }

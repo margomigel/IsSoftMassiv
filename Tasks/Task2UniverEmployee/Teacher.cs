@@ -7,15 +7,15 @@ namespace Task2UniverEmployee
 	{
 		public Course Course { get; set; }
 
-		public Teacher(Person person, int taxID, Course course): base (person, taxID)
+		public Teacher(string person, int taxID, Course course): base (person, taxID)
 		{
 			Course = course;
 		}
 	}
 
-    public override string GetOfficialDuties():
+    public override string GetOfficialDuties()
 	{
-        return $"teaching course {Course}";
+        return $"teaching course {Course.course}";
     }
 }
 //Создать класс Teacher

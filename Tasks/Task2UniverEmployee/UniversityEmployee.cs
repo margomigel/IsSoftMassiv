@@ -5,16 +5,16 @@ namespace Task2UniverEmployee
 {
 	public class UniversityEmployee
 	{
-		public Person Person;
+		public string Person;
 		public int TaxID { get; set; }
 
-		public UniversityEmployee(Person person, int taxID)
+		public UniversityEmployee(string person, int taxID)
 		{
 			Person = person;
 			TaxID = taxID;
 		}
 
-		public virtual string GetOfficialDuties():
+		public virtual string GetOfficialDuties()
 		{
 			return "University Employee's duties";
 		}
