@@ -1,5 +1,4 @@
 ﻿using Task1Candidates;
-using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -8,13 +7,7 @@ internal class Program
     {
 
         Person personIvanov = new Person("Ivan", "Ivanov",
-            new Address(
-                "Minsk",
-                "Kalinovskogo",
-                23,
-                50
-                )
-            );
+            new Address("Minsk", "Kalinovskogo", 23, 50));
         SubjectScore ivanovMath = new SubjectScore("math", 10);
         SubjectScore ivanovChem = new SubjectScore("chem", 9);
         SubjectScore ivanovHist = new SubjectScore("hist", 9);
