@@ -1,13 +1,10 @@
-﻿using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Xml.Linq;
-
+﻿
 namespace Task2UniverEmployee
 {
 	public class Course
 	{
-		public string NameCourse;
-		public string CourseAbout;
+		public string NameCourse { get; set; }
+		public string CourseAbout { get; set; }
 
 		public Course(string nameCourse, string courseAbout)
 		{

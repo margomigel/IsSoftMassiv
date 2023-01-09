@@ -4,7 +4,7 @@ namespace Task2UniverEmployee
 {
     public class SupportStaff : UniversityEmployee
     {
-        string Function;
+        string Function { get; set; }
 
         public SupportStaff(string person, int taxID, string function) : base(person, taxID)
         {

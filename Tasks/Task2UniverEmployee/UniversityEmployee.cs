@@ -3,7 +3,7 @@ namespace Task2UniverEmployee
 {
 	public abstract class UniversityEmployee
 	{
-		public string Person;
+		public string Person { get; set; }
 		public int TaxID { get; set; }
 
 		public UniversityEmployee(string person, int taxID)

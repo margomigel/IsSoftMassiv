@@ -1,11 +1,10 @@
-﻿using System;
-
+﻿
 namespace Task2UniverEmployee
 {
     public class DegreeTeacher : Teacher
     {
-        public string ScienceDegree;
-        public string Rank;
+        public string ScienceDegree { get; set; }
+        public string Rank { get; set; }
 
         public DegreeTeacher(string person,
             int taxID,
@@ -16,6 +15,11 @@ namespace Task2UniverEmployee
         {
             ScienceDegree = scienceDegree;
             Rank = rank;
+        }
+
+        public override string GetOfficialDuties()
+        {
+            return $"teaching course {Course}; Degree: {ScienceDegree} {Rank}";
         }
     }
 }
