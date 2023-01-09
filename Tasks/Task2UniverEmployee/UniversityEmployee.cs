@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO.Pipes;
-
+﻿
 namespace Task2UniverEmployee
 {
 	public abstract class UniversityEmployee

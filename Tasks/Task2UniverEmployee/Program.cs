@@ -19,16 +19,19 @@ internal class Program
             vasiliev
         };
 
+        Console.WriteLine("University Employees are: ");
         foreach (UniversityEmployee universityEmployee in universityEmployees)
         {
-            Console.WriteLine($" {universityEmployee.Person} {universityEmployee.GetOfficialDuties}; ");
+            Console.WriteLine($" {universityEmployee.Person} {universityEmployee.GetOfficialDuties()}; ");
         }
 
+        Console.WriteLine(" ");
+        Console.WriteLine("University's teachers are: ");
         foreach (UniversityEmployee universityEmployee in universityEmployees)
         {
             if (universityEmployee is Teacher)
             {
-                Console.WriteLine($" {universityEmployee.Person} {universityEmployee.GetOfficialDuties}; ");
+                Console.WriteLine($" {universityEmployee.Person} {universityEmployee.GetOfficialDuties()}; ");
             }
         }
     }

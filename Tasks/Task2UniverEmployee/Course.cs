@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
 
 namespace Task2UniverEmployee
 {
@@ -12,7 +14,11 @@ namespace Task2UniverEmployee
 			NameCourse = nameCourse;
 			CourseAbout = courseAbout;
 		}
-	}
+		public override string ToString()
+		{
+            return $"{NameCourse}: {CourseAbout}";
+        }
+    }
 }
 //Создать класс Course-
 //включает название и описание курса
