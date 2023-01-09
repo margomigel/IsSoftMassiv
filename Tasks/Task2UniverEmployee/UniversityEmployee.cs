@@ -3,7 +3,7 @@ using System.IO.Pipes;
 
 namespace Task2UniverEmployee
 {
-	public class UniversityEmployee
+	public abstract class UniversityEmployee
 	{
 		public string Person;
 		public int TaxID { get; set; }
@@ -14,11 +14,7 @@ namespace Task2UniverEmployee
 			TaxID = taxID;
 		}
 
-		public virtual string GetOfficialDuties()
-		{
-			return "University Employee's duties";
-		}
-
+		public abstract string GetOfficialDuties();
 	}
 }
 
