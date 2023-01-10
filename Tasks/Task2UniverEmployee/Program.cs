@@ -1,4 +1,5 @@
-﻿using Task2UniverEmployee;
+﻿/*
+using Task2UniverEmployee;
 
 internal class Program
 {
@@ -51,6 +52,7 @@ internal class Program
         }
     }
 }
+*/
 
 //Вывести на консоль всех сотрудников университета
 //с описанием должностных обязанностей каждого
