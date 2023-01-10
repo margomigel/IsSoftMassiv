@@ -4,12 +4,12 @@ namespace Task2UniverEmployee
 	public abstract class UniversityEmployee
 	{
 		public string Person { get; set; }
-		public int TaxID { get; set; }
+		public int TaxId { get; set; }
 
 		public UniversityEmployee(string person, int taxID)
 		{
 			Person = person;
-			TaxID = taxID;
+			TaxId = taxID;
 		}
 
 		public abstract string GetOfficialDuties();
