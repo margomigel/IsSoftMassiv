@@ -1,10 +1,19 @@
 ﻿using System;
+using Task1Candidates;
 
 namespace Tasks.Task3Building
 {
-    internal class Building
+    public class Building
     {
+        public Room[] rooms; 
+        public Address Address { get; set; }
+        
 
+        public Building(Room[] rooms, Address address) 
+        {
+            this.rooms = rooms;
+            Address = address;
+        }
     }
 }
 // Создать классы Building

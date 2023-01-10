@@ -1,15 +1,23 @@
-﻿using System;
+﻿using Task1Candidates;
+using Task2UniverEmployee;
 
 namespace Tasks.Task3Building
 {
     public class University
     {
-        UniversityEmployee[] universityEmployees;
-        public string Rector { get; set; }
-        Building[] buildings;
+        public UniversityEmployee[] universityEmployees;
+        public Person Rector { get; set; }
+        public Building[] buildings;
+        public Address LegalAddress { get; set; }
 
-        public University(UniversityEmployee [] universityEmployees, string rector, Buildings [] buildings)
-            
+        public University(UniversityEmployee[] universityEmployees, Person rector, Building[] buildings, Address legalAddress)
+        {
+            this.universityEmployees= universityEmployees;
+            Rector= rector;
+            this.buildings = buildings;
+            LegalAddress= legalAddress;
+        }
+
     }
 }
 

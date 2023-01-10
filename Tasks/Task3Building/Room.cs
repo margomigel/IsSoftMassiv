@@ -2,12 +2,12 @@
 
 namespace Tasks.Task3Building
 {
-    internal class Room
+    public class Room
     {
-        public string RoomNumber { get; set; } 
+        public int RoomNumber { get; set; } 
         public string Appointment { get; set; }
 
-        public  Room (string roomNumber, string appointment) 
+        public  Room (int roomNumber, string appointment) 
         {
             RoomNumber = roomNumber;
             Appointment = appointment;
