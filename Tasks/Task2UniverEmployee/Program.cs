@@ -35,14 +35,14 @@ internal class Program
         };
 
         Console.WriteLine("University Employees are: ");
-        foreach (UniversityEmployee universityEmployee in universityEmployees)
+        foreach (var universityEmployee in universityEmployees)
         {
             Console.WriteLine($" {universityEmployee.Person} {universityEmployee.GetOfficialDuties()}; ");
         }
 
         Console.WriteLine(" ");
         Console.WriteLine("University's teachers are: ");
-        foreach (UniversityEmployee universityEmployee in universityEmployees)
+        foreach (var universityEmployee in universityEmployees)
         {
             if (universityEmployee is Teacher)
             {
