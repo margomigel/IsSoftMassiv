@@ -26,7 +26,5 @@ namespace Task1Candidates
             Subject = subject;
             _score = score;
         }
-
     }
-
 }
