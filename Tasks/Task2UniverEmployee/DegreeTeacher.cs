@@ -1,5 +1,4 @@
-﻿
-namespace Task2UniverEmployee
+﻿namespace Task2UniverEmployee
 {
     public class DegreeTeacher : Teacher
     {

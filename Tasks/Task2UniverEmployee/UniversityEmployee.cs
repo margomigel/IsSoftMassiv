@@ -1,12 +1,12 @@
-﻿
+﻿using info-candidates
 namespace Task2UniverEmployee
 {
 	public abstract class UniversityEmployee
 	{
-		public string Person { get; set; }
+		public Person person { get; set; }
 		public int TaxId { get; set; }
 
-		public UniversityEmployee(string person, int taxID)
+		public UniversityEmployee(Person person, int taxID)
 		{
 			Person = person;
 			TaxId = taxID;
