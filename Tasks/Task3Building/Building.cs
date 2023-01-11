@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Task1Candidates;
 
 namespace Tasks.Task3Building

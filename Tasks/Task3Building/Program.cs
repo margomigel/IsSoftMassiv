@@ -76,8 +76,6 @@ internal class Program
 
 
         University university = new University(universityEmployees, rector, buildings, legalAddress);
-        
-        Console.WriteLine(university.ToString());
         }
     }
 //Создать и инициализировать объект
