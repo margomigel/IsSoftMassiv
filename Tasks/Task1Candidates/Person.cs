@@ -12,5 +12,9 @@
             Surname = surname;
             Address = address;
         }
+        public override string ToString()
+        {
+            return $"{Name} {Surname}";
+        }
     }
 }
