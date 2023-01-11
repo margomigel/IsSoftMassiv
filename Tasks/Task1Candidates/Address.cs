@@ -42,8 +42,8 @@ namespace Task1Candidates
         {
             City = city;
             Street = street;
-            House = _house;
-            Appartment = _appartment;
+            House = house;
+            Appartment = appartment;
         }
     }
 }
