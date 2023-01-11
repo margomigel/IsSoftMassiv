@@ -1,5 +1,4 @@
-﻿
-namespace Task1Candidates
+﻿namespace Task1Candidates
 {
     public class Person
     {

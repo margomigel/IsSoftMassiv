@@ -1,4 +1,5 @@
-﻿namespace Task2UniverEmployee
+﻿using Tasks.Taks1Candidates;
+namespace Task2UniverEmployee
 {
 	public class Teacher : UniversityEmployee
 	{
