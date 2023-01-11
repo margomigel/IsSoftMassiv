@@ -1,12 +1,11 @@
-﻿using System;
-
+﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
     public class SupportStaff : UniversityEmployee
     {
         public string Function { get; set; }
 
-        public SupportStaff(string person, int taxID, string function) : base(person, taxID)
+        public SupportStaff(Person person, int taxId, string function) : base(person, taxId)
         {
             Function = function;
         }

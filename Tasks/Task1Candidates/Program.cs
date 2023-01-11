@@ -1,4 +1,5 @@
-﻿using Task1Candidates;
+﻿/*
+using Task1Candidates;
 
 internal class Program
 {
@@ -103,3 +104,4 @@ internal class Program
             Console.WriteLine($"Max {subject}'s grade is {maxGrade}");
         }
 }
+*/
