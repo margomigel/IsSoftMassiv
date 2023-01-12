@@ -1,5 +1,4 @@
-﻿
-namespace Task1Candidates
+﻿namespace Task1Candidates
 {
     public class Person
     {
@@ -12,6 +11,10 @@ namespace Task1Candidates
             Name = name;
             Surname = surname;
             Address = address;
+        }
+        public override string ToString()
+        {
+            return $"{Name} {Surname}";
         }
     }
 }
