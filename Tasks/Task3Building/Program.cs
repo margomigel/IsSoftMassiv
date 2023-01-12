@@ -50,31 +50,31 @@ internal class Program
 
         List <Building> buildings = new List<Building>{
                 new Building (
-                    new Room []{
+                    new List<Room>{
                         new Room (1, "lecture"),
                         new Room (2, "laboratory"),
                         new Room (3, "seminary"),
                         new Room (4, "auxiliary")
                         },
-                    new Address ("Minsk","Nezavisimosti", 12, 101)
+                    new Address ("Minsk","Nezavisimosti", 10, 100)
                 ),
                 new Building (
-                    new Room []{
+                    new List <Room>{
                         new Room (1, "lecture"),
                         new Room (2, "laboratory"),
                         new Room (3, "seminary"),
                         new Room (4, "auxiliary")
                         },
-                    new Address ("Minsk","Nezavisimosti", 12, 102)
+                    new Address ("Minsk","Nezavisimosti", 11, 102)
                 ),
                 new Building (
-                    new Room []{
+                    new List<Room>{
                         new Room (1, "lecture"),
                         new Room (2, "laboratory"),
                         new Room (3, "seminary"),
                         new Room (4, "auxiliary")
                         },
-                    new Address ("Minsk","Nezavisimosti", 12, 103)
+                    new Address ("Minsk","Nezavisimosti", 13, 103)
                 )
             };
 

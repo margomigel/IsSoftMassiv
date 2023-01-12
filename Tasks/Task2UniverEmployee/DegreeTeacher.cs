@@ -10,7 +10,7 @@ namespace Task2UniverEmployee
             int taxId,
             Course course,
             string scienceDegree,
-            string rank) :
+            string rank):
             base(person, taxId, course)
         {
             ScienceDegree = scienceDegree;

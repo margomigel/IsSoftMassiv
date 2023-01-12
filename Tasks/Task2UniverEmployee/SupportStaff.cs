@@ -5,7 +5,7 @@ namespace Task2UniverEmployee
     {
         public string Function { get; set; }
 
-        public SupportStaff(Person person, int taxId, string function) : base(person, taxId)
+        public SupportStaff(Person person, int taxId, string function): base(person, taxId)
         {
             Function = function;
         }
