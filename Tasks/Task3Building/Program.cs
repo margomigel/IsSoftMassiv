@@ -45,7 +45,6 @@ internal class Program
             petrov,
             ivanov,
             fedorenko,
-            vasiliev
         };
 
         List <Building> buildings = new List<Building>{
@@ -88,6 +87,20 @@ internal class Program
 
 
         University university = new University(universityEmployees, rector, buildings, legalAddress);
+
+        University.AddEmployee(vasiliev);
+
+        var vasiliev1 = new DegreeTeacher(
+            new Person(
+                "Vasiliy3",
+                "Vasiliev",
+                new Address("Minsk", "Lojinskaya", 18, 76)),
+            112233,
+            new Course("history", "about history"),
+            "Bachelor",
+            "history science");
+
+        University.AddEmployee(vasiliev1);
     }
 }
 //Создать и инициализировать объект
