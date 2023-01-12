@@ -1,5 +1,5 @@
 ﻿/*
-using Task1Candidates;
+ using Task1Candidates;
 
 internal class Program
 {
