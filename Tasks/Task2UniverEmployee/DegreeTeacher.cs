@@ -23,7 +23,7 @@ namespace Task2UniverEmployee
             return $"teaching course {Course}; Degree: {ScienceDegree} {Rank}";
         }
 
-        public override bool Equals(object obj)
+        /*public override bool Equals(object obj)
         {
             if (obj is DegreeTeacher)
             {
@@ -38,7 +38,7 @@ namespace Task2UniverEmployee
             {
                 return false;
             }
-        }
+        }*/
     }
 }
 //Создать класс DegreeTeacher-

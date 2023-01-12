@@ -16,7 +16,7 @@ namespace Task2UniverEmployee
             return $"teaching course {Course}";
         }
 
-        public override bool Equals(object obj)
+        /*public override bool Equals(object obj)
         {
             if (obj is Teacher)
             {
@@ -25,11 +25,10 @@ namespace Task2UniverEmployee
                        && teacher.TaxId.Equals(TaxId)
                        && teacher.Course.Equals(Course);
             }
-
             {
                 return false;
             }
-        }
+        }*/
     }
 }
 
