@@ -1,4 +1,6 @@
-﻿namespace Task1Candidates
+﻿using Task2UniverEmployee;
+
+namespace Task1Candidates
 {
     public class Person
     {
@@ -16,5 +18,17 @@
         {
             return $"{Name} {Surname}";
         }
-    }
+        public override bool Equals(object obj)
+        {
+            if (obj is Person)
+            {
+                Person person = obj as Person;
+                return person.Name.Equals(Name)
+                    && person.Surname.Equals(Surname)
+                    && person.Address.Equals(Address);
+            }
+            {
+                return false;
+            }
+        }
 }

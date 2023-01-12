@@ -1,4 +1,6 @@
-﻿namespace Tasks.Task3Building
+﻿using Task2UniverEmployee;
+
+namespace Tasks.Task3Building
 {
     public class Room
     {
@@ -10,7 +12,18 @@
             RoomNumber = roomNumber;
             Appointment = appointment;
         }
-    }
+        public override bool Equals(object obj)
+        {
+            if (obj is Room)
+            {
+                Room room = obj as Room;
+                return room.RoomNumber.Equals(RoomNumber)
+                    && room.Appointment.Equals(Appointment);
+            }
+            {
+                return false;
+            }
+        }
 }
 //// и Room ( в здании массив помещений),
 // каждое помещение имеет назначение- лекционное, лабораторное, семинарское, вспомогательное)

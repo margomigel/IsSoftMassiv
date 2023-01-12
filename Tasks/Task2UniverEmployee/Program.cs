@@ -1,4 +1,5 @@
-﻿using Task1Candidates;
+/*
+using Task1Candidates;
 using Task2UniverEmployee;
 
 internal class Program

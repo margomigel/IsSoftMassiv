@@ -1,4 +1,5 @@
-﻿
+﻿using Task2UniverEmployee;
+
 namespace Task1Candidates
 {
     public class SubjectScore
@@ -26,5 +27,16 @@ namespace Task1Candidates
             Subject = subject;
             _score = score;
         }
-    }
+        public override bool Equals(object obj)
+        {
+            if (obj is SubjectScore)
+            {
+                SubjectScore subjectScore = obj as SubjectScore;
+                return subjectScore.Subject.Equals(Subject)
+                    && subjectScore.Score.Equals(Score);
+            }
+            {
+                return false;
+            }
+        }
 }

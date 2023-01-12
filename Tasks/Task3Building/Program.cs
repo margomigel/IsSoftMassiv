@@ -41,7 +41,7 @@ internal class Program
             "history science"
         );
 
-        List<UniversityEmployee> universityEmployees = new List<UniversityEmployee>{
+        List<UniversityEmployee> universityEmployees = new List<UniversityEmployee> {
             petrov,
             ivanov,
             fedorenko,
@@ -51,32 +51,32 @@ internal class Program
         List <Building> buildings = new List<Building>{
                 new Building (
                     new List<Room>{
-                        new Room (1, "lecture"),
-                        new Room (2, "laboratory"),
-                        new Room (3, "seminary"),
-                        new Room (4, "auxiliary")
+                        new Room (11, "lecture"),
+                        new Room (12, "laboratory"),
+                        new Room (13, "seminary"),
+                        new Room (14, "auxiliary")
                         },
                     new Address ("Minsk","Nezavisimosti", 10, 100)
                 ),
                 new Building (
                     new List <Room>{
-                        new Room (1, "lecture"),
-                        new Room (2, "laboratory"),
-                        new Room (3, "seminary"),
-                        new Room (4, "auxiliary")
+                        new Room (21, "lecture"),
+                        new Room (22, "laboratory"),
+                        new Room (23, "seminary"),
+                        new Room (24, "auxiliary")
                         },
                     new Address ("Minsk","Nezavisimosti", 11, 102)
                 ),
                 new Building (
                     new List<Room>{
-                        new Room (1, "lecture"),
-                        new Room (2, "laboratory"),
-                        new Room (3, "seminary"),
-                        new Room (4, "auxiliary")
+                        new Room (31, "lecture"),
+                        new Room (32, "laboratory"),
+                        new Room (33, "seminary"),
+                        new Room (34, "auxiliary")
                         },
                     new Address ("Minsk","Nezavisimosti", 13, 103)
                 )
-            };
+        };
 
         Person rector = new Person(
             "Alexandr",
@@ -88,7 +88,17 @@ internal class Program
 
 
         University university = new University(universityEmployees, rector, buildings, legalAddress);
-        }
     }
+}
 //Создать и инициализировать объект
 //типа University (ректор, юридический адрес, сотрудники, здания)
+//Для всех сущностей переопределить метод Equals
+//Для всех сущностей, включающих списки List,
+//           обеспечить уникальность объектов в списке.
+//           Например, в университете должен быть только
+//           один сотрудник с конкретным ТахId,
+//           попытка добавления сотрудника с тем же TaxId не должна быть успшной
+//           (сотрудник не добавляется).
+//       Для этого в классе University сделать publuc метод AddEmployee,
+//           который проходит по списку сотрудников и сранивает их с новым кандидатом при помощи Equals.
+//          Если сотрудник с таким TaxId не найден, добавляет его в список. 

@@ -21,7 +21,21 @@ namespace Task2UniverEmployee
         {
             return $"teaching course {Course}; Degree: {ScienceDegree} {Rank}";
         }
-    }
+        public override bool Equals(object obj)
+        {
+            if (obj is DegreeTeacher)
+            {
+                DegreeTeacher degreeTeacher = obj as DegreeTeacher;
+                return degreeTeacher.Person.Equals(Person)
+                    && degreeTeacher.TaxId.Equals(TaxId).Equals(TaxId)
+                    && degreeTeacher.Course.Equals(Course).Equals(Course)
+                    && degreeTeacher.ScienceDegree.Equals(ScienceDegree)
+                    && degreeTeacher.Rank.Equals(Rank);
+            }
+            {
+                return false;
+            }
+        }
 }
 //Создать класс DegreeTeacher-
 //преподаватель со степенью, наследник от Teacher,

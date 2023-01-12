@@ -12,7 +12,19 @@ namespace Task2UniverEmployee
 			TaxId = taxId;
 		}
         public abstract string GetOfficialDuties();
-	}
+
+        public override bool Equals(object obj)
+        {
+            if (obj is UniversityEmployee)
+            {
+                UniversityEmployee universityEmployee = obj as UniversityEmployee;
+                return universityEmployee.TaxId.Equals(TaxId);
+            }
+            {
+                return false;
+            }
+        }
+    }
 }
 
 //Создать класс UniversityEmployee,
