@@ -1,15 +1,16 @@
-﻿
+﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
 	public class Teacher : UniversityEmployee
 	{
 		public Course Course { get; set; }
 
-		public Teacher(string person, int taxID, Course course) : base(person, taxID)
+		public Teacher(Person person, int taxId, Course course) : base(person, taxId)
 		{
 			Course = course;
 		}
-		public override string GetOfficialDuties()
+		
+        public override string GetOfficialDuties()
 		{
 			return $"teaching course {Course}";
 		}

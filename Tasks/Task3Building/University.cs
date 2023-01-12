@@ -5,12 +5,12 @@ namespace Tasks.Task3Building
 {
     public class University
     {
-        public UniversityEmployee[] universityEmployees;
+        public List <UniversityEmployee> universityEmployees;
         public Person Rector { get; set; }
-        public Building[] buildings;
+        public List <Building> buildings;
         public Address LegalAddress { get; set; }
 
-        public University(UniversityEmployee[] universityEmployees, Person rector, Building[] buildings, Address legalAddress)
+        public University(List <UniversityEmployee> universityEmployees, Person rector, List<Building> buildings, Address legalAddress)
         {
             this.universityEmployees= universityEmployees;
             Rector= rector;

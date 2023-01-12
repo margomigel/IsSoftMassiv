@@ -1,4 +1,4 @@
-﻿/*
+﻿using Task1Candidates;
 using Task2UniverEmployee;
 
 internal class Program
@@ -6,32 +6,44 @@ internal class Program
     private static void Main(string[] args)
     {
         var petrov = new Teacher(
-            "Petr Petrov",
+            new Person(
+                "Oleg", 
+                "Putickiy", 
+                new Address("Minsk", "Pobeditelei", 3, 8)),
             13579,
             new Course("physics", "about physics")
             );
         var ivanov = new Teacher(
-            "Ivan Ivanov",
+            new Person(
+                "Alexey",
+                "Velichko",
+                new Address("Minsk", "Slavinskogo", 4, 120)),
             12345,
             new Course("mathematics", "about mathematics")
             );
-        var fedorov = new SupportStaff(
-            "Fedor Fedorov",
+        var fedorenko = new SupportStaff(
+            new Person (
+                "Dmitriy",
+                "Fedorenko",
+                new Address ("Minks", "Skoriny", 8, 32)),
             24680,
             "cleaner"
             );
         var vasiliev = new DegreeTeacher(
-            "Vasiliy Vasiliev",
-            112233, 
+            new Person (
+                "Vasiliy",
+                "Vasiliev",
+                new Address ("Minsk", "Lojinskaya", 18,76)),
+            112233,
             new Course("history", "about history"),
             "Bachelor",
             "history science"
             );
 
-        UniversityEmployee[] universityEmployees = {
+        List<UniversityEmployee> universityEmployees = new List <UniversityEmployee>{
             petrov,
             ivanov,
-            fedorov,
+            fedorenko,
             vasiliev
         };
 

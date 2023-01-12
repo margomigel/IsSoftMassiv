@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Tasks.Task3Building
+﻿namespace Tasks.Task3Building
 {
     public class Room
     {

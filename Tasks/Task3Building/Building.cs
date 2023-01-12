@@ -1,15 +1,13 @@
-﻿
-using Task1Candidates;
+﻿using Task1Candidates;
 
 namespace Tasks.Task3Building
 {
     public class Building
     {
-        public Room[] rooms; 
+        public List<Room> rooms; 
         public Address Address { get; set; }
-        
 
-        public Building(Room[] rooms, Address address) 
+        public Building(List<Room> rooms, Address address) 
         {
             this.rooms = rooms;
             Address = address;

@@ -1,18 +1,17 @@
-﻿
+﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
 	public abstract class UniversityEmployee
 	{
-		public string Person { get; set; }
+		public Person Person { get; set; }
 		public int TaxId { get; set; }
 
-		public UniversityEmployee(string person, int taxID)
+		public UniversityEmployee(Person person, int taxId)
 		{
 			Person = person;
-			TaxId = taxID;
+			TaxId = taxId;
 		}
-
-		public abstract string GetOfficialDuties();
+        public abstract string GetOfficialDuties();
 	}
 }
 
