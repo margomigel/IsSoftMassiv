@@ -59,5 +59,10 @@ namespace Task1Candidates
                 return false;
             }
         }
+
+        public override string ToString()
+        {
+            return $"{City}, {Street}, {House}, {Appartment}";
+        }
     }
 }
