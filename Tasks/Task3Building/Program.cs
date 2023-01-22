@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using System.Linq.Expressions;
-using Task1Candidates;
+﻿using Task1Candidates;
 using Task2UniverEmployee;
 using Tasks.Task3Building;
 
@@ -137,13 +135,11 @@ internal class Program
 
         University university = new University(universityEmployees, rector, buildings, legalAddress);
 
-
-        university.AddEmployee(vasilievV);
+        university.AddEmployee(vasilievV); 
         university.AddEmployee(vasilievA);
         university.AddEmployee(vasilievB);
         university.AddEmployee(volovik);
         university.AddEmployee(voronova);
-
 
         var FilteredListUniverEmployees = universityEmployees
             .Where(universityEmployee => universityEmployee.Person.Surname.Contains("V"))
@@ -194,6 +190,10 @@ internal class Program
                 .First();
 
             Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
+
+            universityEmployees.Sort();
+            Console.WriteLine(" ");
+
     }
 }
 //Создать и инициализировать объект
