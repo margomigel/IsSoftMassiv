@@ -6,7 +6,7 @@ namespace Task1Candidates
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Address Address;
+        public Address Address { get; set; }
 
         public Person(string name, string surname, Address address)
         {
@@ -22,17 +22,13 @@ namespace Task1Candidates
 
         public override bool Equals(object obj)
         {
-            if (obj is Person)
+            if (obj is Person person)
             {
-                Person person = obj as Person;
                 return person.Name.Equals(Name)
                        && person.Surname.Equals(Surname)
                        && person.Address.Equals(Address);
             }
-
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

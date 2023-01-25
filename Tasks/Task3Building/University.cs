@@ -5,56 +5,52 @@ namespace Tasks.Task3Building
 {
     public class University
     {
-        public List<UniversityEmployee> universityEmployees;
+        public List<UniversityEmployee> UniversityEmployees { get; set; }
         public Person Rector { get; set; }
-        public List<Building> buildings;
+        public List<Building> Buildings { get; set; }
         public Address LegalAddress { get; set; }
 
         public University(List<UniversityEmployee> universityEmployees, Person rector, List<Building> buildings,
             Address legalAddress)
         {
-            this.universityEmployees = universityEmployees;
+            UniversityEmployees = universityEmployees;
             Rector = rector;
-            this.buildings = buildings;
+            Buildings = buildings;
             LegalAddress = legalAddress;
         }
 
         public override bool Equals(object obj)
         {
-            if (obj is University)
+            if (obj is University university)
             {
-                University university = obj as University;
                 return university.Rector.Equals(Rector)
                        && university.LegalAddress.Equals(LegalAddress);
             }
-
-            {
-                return false;
-            }
+            return false;
         }
 
         public void AddEmployee (UniversityEmployee universityEmployeeToAdd)
         {
-            foreach (UniversityEmployee universityEmployee in universityEmployees)
+            foreach (UniversityEmployee universityEmployee in UniversityEmployees)
             {
                 if (universityEmployee.Equals(universityEmployeeToAdd))
                 {
                     return;
                 }
             }
-            universityEmployees.Add(universityEmployeeToAdd);
+            UniversityEmployees.Add(universityEmployeeToAdd);
         }
 
         public void AddBuilding(Building buildingToAdd)
         {
-            foreach (Building building in buildings)
+            foreach (Building building in Buildings)
             {
                 if (building.Equals(buildingToAdd))
                 {
                     return;
                 }
             }
-            buildings.Add(buildingToAdd);
+            Buildings.Add(buildingToAdd);
         }
     }
 }

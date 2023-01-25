@@ -15,16 +15,12 @@ namespace Tasks.Task3Building
 
         public override bool Equals(object obj)
         {
-            if (obj is Room)
+            if (obj is Room room)
             {
-                Room room = obj as Room;
                 return room.RoomNumber.Equals(RoomNumber)
                        && room.Appointment.Equals(Appointment);
             }
-
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

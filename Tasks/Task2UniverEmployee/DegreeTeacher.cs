@@ -25,19 +25,15 @@ namespace Task2UniverEmployee
 
         /*public override bool Equals(object obj)
         {
-            if (obj is DegreeTeacher)
+            if (obj is DegreeTeacher degreeTeacher)
             {
-                DegreeTeacher degreeTeacher = obj as DegreeTeacher;
                 return degreeTeacher.Person.Equals(Person)
                        && degreeTeacher.TaxId.Equals(TaxId).Equals(TaxId)
                        && degreeTeacher.Course.Equals(Course).Equals(Course)
                        && degreeTeacher.ScienceDegree.Equals(ScienceDegree)
                        && degreeTeacher.Rank.Equals(Rank);
             }
-
-            {
                 return false;
-            }
         }*/
     }
 }

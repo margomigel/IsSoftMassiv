@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using System.Linq.Expressions;
-using Task1Candidates;
+﻿using Task1Candidates;
 using Task2UniverEmployee;
 using Tasks.Task3Building;
 
@@ -77,13 +75,13 @@ internal class Program
             "cleaner"
         );
 
-        List <UniversityEmployee> universityEmployees = new List<UniversityEmployee> {
+        var universityEmployees = new List<UniversityEmployee> {
             petrov,
             velichko,
             fedorenko,
         };
 
-        List <Building> buildings = new List<Building>{
+        var buildings = new List<Building>{
                 new Building (
                     new List<Room>{
                         new Room (11, "lecture"),
@@ -125,17 +123,17 @@ internal class Program
         };
 
 
-        Person rector = new Person(
+        var rector = new Person(
             "Alexandr",
             "Volkov",
             new Address("Minsk", "Kolasa", 23, 75)
             );
 
 
-        Address legalAddress = new Address("Minsk", "Nezavisimosti", 12, 109);
+        var legalAddress = new Address("Minsk", "Nezavisimosti", 12, 109);
 
 
-        University university = new University(universityEmployees, rector, buildings, legalAddress);
+        var university = new University(universityEmployees, rector, buildings, legalAddress);
 
 
         university.AddEmployee(vasilievV);
@@ -146,7 +144,7 @@ internal class Program
 
 
         var FilteredListUniverEmployees = universityEmployees
-            .Where(universityEmployee => universityEmployee.Person.Surname.Contains("V"))
+            .Where(universityEmployee => universityEmployee.Person.Surname.StartsWith("V"))
             .OrderBy(person => person.TaxId)
             .ToList();
 
@@ -155,8 +153,8 @@ internal class Program
 
 
         var FilteredTeacherSameCourse = universityEmployees
-            .Where(universityEmployee => universityEmployee is Teacher)
-            .Where(teacher => (teacher as Teacher).Course.NameCourse.Contains("mathematics"))
+            .Where(universityEmployee => universityEmployee is Teacher teacher
+                && teacher.Course.NameCourse.Contains("mathematics"))
             .ToList();
 
         foreach (var teacher in FilteredTeacherSameCourse)
@@ -164,17 +162,16 @@ internal class Program
 
 
 
-        var FilteredListTaxIdDuties = university.universityEmployees
-            .Select(universityEmployee => (universityEmployee.TaxId, universityEmployee.GetOfficialDuties()))
+        var FilteredListTaxIdDuties = university.UniversityEmployees
+            .Select(unEmpl => (id: unEmpl.TaxId, duties: unEmpl.GetOfficialDuties()))
             .ToList();
 
         foreach (var taxIdDuties in FilteredListTaxIdDuties)
-            Console.WriteLine(taxIdDuties);
+            Console.WriteLine($"TaxId: {taxIdDuties.id}, Duties: {taxIdDuties.duties}");
 
 
         var FilteredBuildingsWithSameRoom = buildings
-            .Where(building => building.rooms
-                .Any(room => room.RoomNumber==11))
+            .Where(building => building.Rooms.Any(room => room.RoomNumber==11))
             .ToList();
 
         foreach(Building building in FilteredBuildingsWithSameRoom)
@@ -182,16 +179,14 @@ internal class Program
 
 
         var BuildingWithMaxRooms = buildings
-            .OrderBy(building => building.rooms.Count)
-            .Last();
+            .MaxBy(building => building.Rooms.Count);
 
-            Console.WriteLine(BuildingWithMaxRooms.Address);
+        Console.WriteLine(BuildingWithMaxRooms.Address);
 
 
             var FilteredSameSurname = universityEmployees
                 .GroupBy(univerEmployee => univerEmployee.Person.Surname)
-                .OrderByDescending(group => group.Count())
-                .First();
+                .MaxBy(group => group.Count());
 
             Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
     }

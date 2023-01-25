@@ -15,14 +15,7 @@ namespace Task2UniverEmployee
 
         public override bool Equals(object obj)
         {
-            if (obj is UniversityEmployee)
-            {
-                UniversityEmployee universityEmployee = obj as UniversityEmployee;
-                return universityEmployee.TaxId.Equals(TaxId);
-            }
-            {
-                return false;
-            }
+            return (obj is UniversityEmployee universityEmployee && universityEmployee.TaxId.Equals(TaxId));
         }
     }
 }

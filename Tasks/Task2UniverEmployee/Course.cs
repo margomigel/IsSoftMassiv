@@ -18,16 +18,12 @@
 
         public override bool Equals(object obj)
         {
-            if (obj is Course)
+            if (obj is Course course)
             {
-                Course course = obj as Course;
                 return course.NameCourse.Equals(NameCourse)
                        && course.CourseAbout.Equals(CourseAbout);
             }
-
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

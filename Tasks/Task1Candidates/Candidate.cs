@@ -4,7 +4,7 @@ namespace Task1Candidates
 {
     public class Candidate
     {
-        public Person Person;
+        public Person Person { get; set; }
         public List<SubjectScore> SubjectScore { get; set; }
 
         public Candidate(Person person, List<SubjectScore> subjectScore)
@@ -15,15 +15,7 @@ namespace Task1Candidates
 
         public override bool Equals(object obj)
         {
-            if (obj is Candidate)
-            {
-                Candidate candidate = obj as Candidate;
-                return candidate.Person.Equals(Person);
-            }
-
-            {
-                return false;
-            }
+            return (obj is Candidate candidate && candidate.Person.Equals(Person));
         }
 
         public void AddCandidate(SubjectScore subjectScoreToAdd)

@@ -18,16 +18,13 @@ namespace Task2UniverEmployee
 
         public override bool Equals(object obj)
         {
-            if (obj is SupportStaff)
+            if (obj is SupportStaff supportStaff)
             {
-                SupportStaff supportStaff = obj as SupportStaff;
                 return supportStaff.Person.Equals(Person)
                        && supportStaff.TaxId.Equals(TaxId)
                        && supportStaff.Function.Equals(Function);
             }
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

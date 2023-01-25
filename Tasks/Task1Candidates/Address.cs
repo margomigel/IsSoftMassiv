@@ -1,5 +1,4 @@
-﻿
-using Task2UniverEmployee;
+﻿using Task2UniverEmployee;
 
 namespace Task1Candidates
 {
@@ -47,17 +46,14 @@ namespace Task1Candidates
 
         public override bool Equals(object obj)
         {
-            if (obj is Address)
+            if (obj is Address address)
             {
-                Address address = obj as Address;
                 return address.City.Equals(City)
                        && address.Street.Equals(Street)
                        && address.House.Equals(House)
                        && address.Appartment.Equals(Appartment);
             }
-            {
-                return false;
-            }
+            return false;
         }
 
         public override string ToString()

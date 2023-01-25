@@ -29,16 +29,12 @@ namespace Task1Candidates
 
         public override bool Equals(object obj)
         {
-            if (obj is SubjectScore)
+            if (obj is SubjectScore subjectScore)
             {
-                SubjectScore subjectScore = obj as SubjectScore;
                 return subjectScore.Subject.Equals(Subject)
                        && subjectScore.Score.Equals(Score);
             }
-
-            {
-                return false;
-            }
+            return false;
         }
     }
 }

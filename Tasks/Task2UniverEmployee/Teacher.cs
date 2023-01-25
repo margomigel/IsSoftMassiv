@@ -18,16 +18,13 @@ namespace Task2UniverEmployee
 
         /*public override bool Equals(object obj)
         {
-            if (obj is Teacher)
+            if (obj is Teacher teacher)
             {
-                Teacher teacher = obj as Teacher;
                 return teacher.Person.Equals(Person)
                        && teacher.TaxId.Equals(TaxId)
                        && teacher.Course.Equals(Course);
             }
-            {
                 return false;
-            }
         }*/
     }
 }
