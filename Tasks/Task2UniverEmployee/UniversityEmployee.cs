@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Design;
-using Task1Candidates;
+﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
 	public abstract class UniversityEmployee: IComparable <UniversityEmployee>
@@ -42,7 +41,7 @@ namespace Task2UniverEmployee
                 if (a > b)
                     return -1;
             return 0;
-        }
+        }                                                                                                  
         public abstract string GetOfficialDuties();
 
         public override bool Equals(object obj)
