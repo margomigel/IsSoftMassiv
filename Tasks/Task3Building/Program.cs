@@ -189,6 +189,9 @@ internal class Program
                 .MaxBy(group => group.Count());
 
             Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
+
+            universityEmployees.Sort();
+            Console.WriteLine(" ");
     }
 }
 //Создать и инициализировать объект
