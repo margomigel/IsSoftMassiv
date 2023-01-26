@@ -22,13 +22,7 @@ namespace Tasks.Task3Building
         public void AddRoom(Room roomToAdd)
         {
             if (Rooms.Contains(roomToAdd)) return;
-            foreach (Room room in Rooms)
-            {
-                if (room.Equals(roomToAdd))
-                {
-                    return;
-                }
-            }
+            Rooms.Add(roomToAdd);
         }
     }
 }

@@ -20,10 +20,6 @@ namespace Task2UniverEmployee
     }
 }
 
-//Создать класс UniversityEmployee,
-//включающий поле типа Person и поле TaxID  
-
-
 //В классе UniversityEmployee
 //определить виртуальный метод GetOfficialDuties(),
 //возвращающий строковое описание обязанностей  и возможностей сотрудника

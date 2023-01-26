@@ -1,4 +1,5 @@
 ﻿using Task2UniverEmployee;
+using Tasks.Task3Building;
 
 namespace Task1Candidates
 {
@@ -20,13 +21,7 @@ namespace Task1Candidates
 
         public void AddCandidate(SubjectScore subjectScoreToAdd)
         {
-            foreach (SubjectScore subjectScore in SubjectScore)
-            {
-                if (subjectScore.Equals(subjectScoreToAdd))
-                {
-                    return;
-                }
-            }
+            if (SubjectScore.Contains(subjectScoreToAdd)) return;
             SubjectScore.Add(subjectScoreToAdd);
         }
     }

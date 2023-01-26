@@ -43,13 +43,7 @@ namespace Tasks.Task3Building
 
         public void AddBuilding(Building buildingToAdd)
         {
-            foreach (Building building in Buildings)
-            {
-                if (building.Equals(buildingToAdd))
-                {
-                    return;
-                }
-            }
+            if (Buildings.Contains(buildingToAdd)) return;
             Buildings.Add(buildingToAdd);
         }
     }
