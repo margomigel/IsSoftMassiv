@@ -188,25 +188,24 @@ internal class Program
                 .GroupBy(univerEmployee => univerEmployee.Person.Surname)
                 .MaxBy(group => group.Count());
 
-            Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
+        Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
 
-            universityEmployees.Sort();
-            Console.WriteLine(" ");
+        /* Сортировка Sort()
+        universityEmployees.Sort();
+        universityEmployees.Reverse();
+        Console.WriteLine(" ");
+        */
+
+        //universityEmployees.Sort(new ComparerNameSurname());
+        //universityEmployees.Reverse();
+
+        var SorteduniversityEmployees = universityEmployees.OrderBy(univerEmployee 
+            => (univerEmployee.Person.Name.Length + univerEmployee.Person.Surname.Length))
+            .Reverse().ToList();
+
+        Console.WriteLine(" ");
     }
 }
-//Создать и инициализировать объект
-//типа University (ректор, юридический адрес, сотрудники, здания)
-
-//Для всех сущностей переопределить метод Equals
-
-//Для всех сущностей, включающих списки List, обеспечить уникальность объектов в списке.
-//           Например, в университете должен быть только один сотрудник с конкретным ТахId,
-//           попытка добавления сотрудника с тем же TaxId не должна быть успшной
-//           (сотрудник не добавляется).
-//    Для этого в классе University сделать publuc метод AddEmployee,
-//          который проходит по списку сотрудников и сранивает их с новым кандидатом при помощи Equals.
-//          Если сотрудник с таким TaxId не найден, добавляет его в список. 
-
 
 // LINQ
 // + Вывести на экран всех сотрудников университета с фамилией,
@@ -222,4 +221,4 @@ internal class Program
 
 //5. + Вывести на экран адрес здания с максимальным количеством комнат в нем
 
-//6.Вывести на экран самую часто встречающуюся фамилию сотрудника, и число таких сотрудников
+//6. + Вывести на экран самую часто встречающуюся фамилию сотрудника, и число таких сотрудников

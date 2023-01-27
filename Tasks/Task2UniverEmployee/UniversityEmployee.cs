@@ -1,7 +1,7 @@
 ﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
-    public abstract class UniversityEmployee : IComparable<UniversityEmployee>
+    public abstract class UniversityEmployee //: IComparable<UniversityEmployee>
     {
         public Person Person { get; set; }
         public int TaxId { get; set; }
@@ -30,19 +30,20 @@ namespace Task2UniverEmployee
             }
         }
 
+       
         public int CompareTo(UniversityEmployee compareUniversityEmployee)
-        // сотировка наоборот специально
         {
             int a = (this.Person.Name.Length + this.Person.Surname.Length);
             int b = (compareUniversityEmployee.Person.Name.Length + compareUniversityEmployee.Person.Surname.Length);
 
-            if (a < b)
+            if (a > b)
                 return 1;
             else
-            if (a > b)
-                return -1;
+                if (a < b)
+                    return -1;
             return 0;
         }
+       
        
         public abstract string GetOfficialDuties();
 
