@@ -1,9 +1,8 @@
-﻿
-using Task2UniverEmployee;
+﻿using Task2UniverEmployee;
 
 namespace Tasks.Task3Building
 {
-    internal class ComparerNameSurname : IComparer<UniversityEmployee>
+    public class ComparerNameSurname : IComparer<UniversityEmployee>
     {
         public int Compare(UniversityEmployee x, UniversityEmployee y)
         {

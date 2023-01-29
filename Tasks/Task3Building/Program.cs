@@ -2,7 +2,7 @@
 using Task2UniverEmployee;
 using Tasks.Task3Building;
 
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {
@@ -190,14 +190,16 @@ internal class Program
 
         Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
 
-        /* Сортировка Sort()
+        /* Сортировка Sort():
         universityEmployees.Sort();
         universityEmployees.Reverse();
         Console.WriteLine(" ");
         */
 
-        //universityEmployees.Sort(new ComparerNameSurname());
-        //universityEmployees.Reverse();
+        /* Сортировка Sort через новый объект:
+        universityEmployees.Sort(new ComparerNameSurname());
+        universityEmployees.Reverse();
+        */
 
         var SorteduniversityEmployees = universityEmployees.OrderBy(univerEmployee 
             => (univerEmployee.Person.Name.Length + univerEmployee.Person.Surname.Length))
