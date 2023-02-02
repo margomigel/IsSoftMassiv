@@ -1,4 +1,5 @@
-﻿using Task2UniverEmployee;
+﻿using System.Data;
+using Task2UniverEmployee;
 
 namespace Tasks.Task3Building
 {
@@ -6,8 +7,12 @@ namespace Tasks.Task3Building
     {
         public int Compare(UniversityEmployee x, UniversityEmployee y)
         {
-            int a = (x.Person.Name.Length + x.Person.Surname.Length);
-            int b = (y.Person.Name.Length + y.Person.Surname.Length);
+            if (x == null || y == null)
+            {
+                throw new ArgumentNullException("Don't compare Employee with null");
+            }
+            int a = (x.Person.NameSurnameLength());
+            int b = (y.Person.NameSurnameLength());
             return a.CompareTo(b);
         }
     }

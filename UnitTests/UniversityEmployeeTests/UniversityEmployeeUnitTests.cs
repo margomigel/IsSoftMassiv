@@ -29,17 +29,17 @@ namespace UnitTests
                 );
         }
 
-                [TestMethod]
-                public void CheckGetOfficialDutiesPositive()
-                {
-                    UniversityEmployee universityEmployee = new SupportStaff(
-                        new Person("Name", "Surname", new Address("City", "Street", 1, 2)),
-                        1234,
-                        "cleaner"
-                        );
+        [TestMethod]
+        public void CheckGetOfficialDutiesPositive()
+        {
+            UniversityEmployee universityEmployee = new SupportStaff(
+                new Person("Name", "Surname", new Address("City", "Street", 1, 2)),
+                1234,
+                "cleaner"
+                );
 
-                    Assert.AreEqual("cleaner duties", universityEmployee.GetOfficialDuties());
-                }
+            Assert.AreEqual("cleaner duties", universityEmployee.GetOfficialDuties());
+        }
 
         [TestMethod]
         public void CheckUniversityEmployeesEqualsPositive()
@@ -51,12 +51,12 @@ namespace UnitTests
                 );
 
             UniversityEmployee universityEmployee2 = new SupportStaff(
-                    new Person("Name2", "Surname2", new Address("City2", "Street2", 1, 2)),
-                    1234,
-                    "cleaner"
-                    );
+                new Person("Name2", "Surname2", new Address("City1", "Street1", 1, 2)),
+                1234,
+                "cleaner"
+                );
 
-            ReferenceEquals(universityEmployee1, universityEmployee2);
+            Assert.IsTrue(universityEmployee1.Equals(universityEmployee2));
         }
 
         [TestMethod]
@@ -69,12 +69,12 @@ namespace UnitTests
                 );
 
             UniversityEmployee universityEmployee2 = new SupportStaff(
-                    new Person("Name2", "Surname2", new Address("City2", "Street2", 1, 2)),
-                    2345,
-                    "cleaner"
-                    );
+                new Person("Name2", "Surname2", new Address("City2", "Street2", 1, 2)),
+                2345,
+                "cleaner"
+                );
 
-            Assert.AreNotEqual(universityEmployee1, universityEmployee2);
+            Assert.IsFalse(universityEmployee1.Equals(universityEmployee2));
         }
     }
 }

@@ -30,5 +30,11 @@ namespace Task1Candidates
             }
             return false;
         }
+
+        public int NameSurnameLength()
+        {
+            return Name.Length + Surname.Length;
+        }
+            
     }
 }

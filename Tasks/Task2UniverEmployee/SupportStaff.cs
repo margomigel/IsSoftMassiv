@@ -15,16 +15,5 @@ namespace Task2UniverEmployee
         {
             return $"{Function} duties";
         }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is SupportStaff supportStaff)
-            {
-                return supportStaff.Person.Equals(Person)
-                       && supportStaff.TaxId.Equals(TaxId)
-                       && supportStaff.Function.Equals(Function);
-            }
-            return false;
-        }
     }
 }

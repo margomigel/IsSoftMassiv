@@ -190,20 +190,17 @@ public class Program
 
         Console.WriteLine($"{FilteredSameSurname.Key}: {FilteredSameSurname.Count()}");
 
-        /* Сортировка Sort():
+        // Сортировка Sort():
         universityEmployees.Sort();
         universityEmployees.Reverse();
-        Console.WriteLine(" ");
-        */
-
-        /* Сортировка Sort через новый объект:
+        
+        // Сортировка Sort через новый объект:
         universityEmployees.Sort(new ComparerNameSurname());
         universityEmployees.Reverse();
-        */
 
-        var SorteduniversityEmployees = universityEmployees.OrderBy(univerEmployee 
-            => (univerEmployee.Person.Name.Length + univerEmployee.Person.Surname.Length))
-            .Reverse().ToList();
+        var SorteduniversityEmployees = universityEmployees.OrderByDescending(univerEmployee 
+            => (univerEmployee.Person.NameSurnameLength()))
+            .ToList();
 
         Console.WriteLine(" ");
     }

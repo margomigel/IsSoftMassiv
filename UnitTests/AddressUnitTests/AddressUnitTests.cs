@@ -7,8 +7,8 @@ namespace UnitTests
         [TestMethod]
         public void CheckEqualsAddressPositive()
         {
-            Address address1 = new("city", "street", 11, 11);
-            Address address2 = new("city", "street", 11, 11);
+            Address address1 = new("city", "street", 11, 22);
+            Address address2 = new("city", "street", 11, 22);
 
             Assert.IsTrue(address1.Equals(address2));
         }
@@ -16,8 +16,35 @@ namespace UnitTests
         [TestMethod]
         public void CheckEqualsAddressNegative()
         {
-            Address address1 = new("city", "street", 11, 11);
-            Address address2 = new("city2", "street2", 11, 11);
+            Address address1 = new("city", "street", 11, 22);
+            Address address2 = new("city2", "street", 11, 22);
+
+            Assert.IsFalse(address1.Equals(address2));
+        }
+
+        [TestMethod]
+        public void CheckEqualsAddressNegativeStreet()
+        {
+            Address address1 = new("city", "street", 11, 22);
+            Address address2 = new("city", "street2", 11, 22);
+
+            Assert.IsFalse(address1.Equals(address2));
+        }
+
+        [TestMethod]
+        public void CheckEqualsAddressNegativeHouse()
+        {
+            Address address1 = new("city", "street", 11, 22);
+            Address address2 = new("city", "street", 101, 22);
+
+            Assert.IsFalse(address1.Equals(address2));
+        }
+
+        [TestMethod]
+        public void CheckEqualsAddressNegativeAppartment()
+        {
+            Address address1 = new("city", "street", 11, 22);
+            Address address2 = new("city", "street", 11, 32);
 
             Assert.IsFalse(address1.Equals(address2));
         }

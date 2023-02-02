@@ -1,13 +1,14 @@
 ﻿using Task1Candidates;
 namespace Task2UniverEmployee
 {
-    public abstract class UniversityEmployee //: IComparable<UniversityEmployee>
+    public abstract class UniversityEmployee : IComparable<UniversityEmployee>
     {
         public Person Person { get; set; }
         public int TaxId { get; set; }
 
         public UniversityEmployee(Person person, int taxId)
         {
+            ArgumentNullException.ThrowIfNull(person);
             Person = person;
             CheckLenghtEmployee(person);
             TaxId = taxId;
@@ -24,7 +25,7 @@ namespace Task2UniverEmployee
 
         private void CheckLenghtEmployee(Person person)
         {
-            if (person.Name.Length + person.Surname.Length > 20)
+            if (person.NameSurnameLength() > 20)
             {
                 throw new ArgumentException("Wrong Name and Surname length!");
             }
@@ -33,8 +34,8 @@ namespace Task2UniverEmployee
        
         public int CompareTo(UniversityEmployee compareUniversityEmployee)
         {
-            int a = (this.Person.Name.Length + this.Person.Surname.Length);
-            int b = (compareUniversityEmployee.Person.Name.Length + compareUniversityEmployee.Person.Surname.Length);
+            int a = Person.NameSurnameLength();
+            int b = (compareUniversityEmployee.Person.NameSurnameLength());
 
             if (a > b)
                 return 1;
