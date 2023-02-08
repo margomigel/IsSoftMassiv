@@ -1,4 +1,5 @@
-﻿using Task1Candidates;
+﻿/*
+using Task1Candidates;
 
 internal class Program
 {
@@ -14,7 +15,7 @@ internal class Program
         SubjectScore ivanovPhis = new SubjectScore("phis", 8);
         SubjectScore ivanovLang = new SubjectScore("lang", 10);
 
-        SubjectScore[] ivanovSubjectScore = {
+        List<SubjectScore> ivanovSubjectScore = new List<SubjectScore> {
             ivanovMath,
             ivanovChem,
             ivanovHist,
@@ -26,7 +27,7 @@ internal class Program
 
         Candidate petrov = new Candidate(
             new Person("Petr", "Petrov", new Address("Minsk", "Chornogo", 12, 31)),
-            new SubjectScore[]{
+            new List <SubjectScore>{
                 new SubjectScore("math", 9),
                 new SubjectScore("chem", 10),
                 new SubjectScore("hist", 6),
@@ -37,7 +38,7 @@ internal class Program
 
         Candidate sidorov = new Candidate(
             new Person("Alexandr", "Sidorov", new Address("Minsk", "Kolasa", 1, 20)),
-            new SubjectScore[]{
+            new List <SubjectScore>{
                 new SubjectScore("math", 6),
                 new SubjectScore("chem", 9),
                 new SubjectScore("hist", 9),
@@ -48,7 +49,7 @@ internal class Program
 
         Candidate kulikova = new Candidate(
             new Person("Anna", "Kulikova", new Address("Grodno", "Gorkogo", 31, 83)),
-            new SubjectScore[]{
+            new List <SubjectScore>{
                 new SubjectScore("math", 10),
                 new SubjectScore("chem", 10),
                 new SubjectScore("hist", 8),
@@ -59,7 +60,7 @@ internal class Program
 
         Candidate mikulina = new Candidate(
             new Person("Maria", "Mikulina", new Address("Grodno", "BLK", 24, 1)),
-            new SubjectScore[]{
+            new List <SubjectScore>{
                 new SubjectScore("math", 10),
                 new SubjectScore("chem", 8),
                 new SubjectScore("hist", 9),
@@ -68,7 +69,7 @@ internal class Program
             }
         );
 
-        Candidate[] candidates = {
+        List <Candidate> candidates = new List<Candidate>{
             ivanov,
             petrov,
             sidorov,
@@ -76,10 +77,10 @@ internal class Program
             mikulina
         };
         ShowInfoStreets(candidates);
-        ShowMaxGradeSubject(candidates, SUBJECT)  ;
+        ShowMaxGradeSubject(candidates, SUBJECT);
     }
 
-    static void ShowInfoStreets(Candidate[] candidates)
+    static void ShowInfoStreets(List <Candidate> candidates)
     {
         Console.WriteLine("Candidate's streets are: ");
         foreach ( Candidate candidate in candidates)
@@ -89,7 +90,7 @@ internal class Program
         Console.WriteLine();
     }
 
-    static void ShowMaxGradeSubject(Candidate[] candidates, string subject) 
+    static void ShowMaxGradeSubject(List <Candidate> candidates, string subject) 
         {
             int maxGrade = 0;
             foreach (Candidate candidate in candidates)
@@ -103,3 +104,4 @@ internal class Program
             Console.WriteLine($"Max {subject}'s grade is {maxGrade}");
         }
 }
+*/

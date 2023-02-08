@@ -1,4 +1,5 @@
-﻿
+﻿using Task2UniverEmployee;
+
 namespace Task1Candidates
 {
     public class Address
@@ -8,26 +9,23 @@ namespace Task1Candidates
         private int _house;
         public string City { get; set; }
         public string Street { get; set; }
-        public int House { 
-            get
-            {
-                return _house;
-            }
+
+        public int House
+        {
+            get { return _house; }
 
             set
-            { 
+            {
                 if (value > 0)
                 {
                     _house = value;
                 }
             }
         }
+
         public int Appartment
         {
-            get
-            {
-                return _appartment;
-            }
+            get { return _appartment; }
 
             set
             {
@@ -38,12 +36,29 @@ namespace Task1Candidates
             }
         }
 
-        public Address (string city, string street, int house, int appartment)
+        public Address(string city, string street, int house, int appartment)
         {
             City = city;
             Street = street;
-            House = _house;
-            Appartment = _appartment;
+            House = house;
+            Appartment = appartment;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Address address)
+            {
+                return address.City.Equals(City)
+                       && address.Street.Equals(Street)
+                       && address.House.Equals(House)
+                       && address.Appartment.Equals(Appartment);
+            }
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"{City}, {Street}, {House}, {Appartment}";
         }
     }
 }
